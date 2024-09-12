@@ -1,4 +1,4 @@
-name: WLED compile ESP32C3DEV
+name: WLED compile
 
 on:
     workflow_dispatch:
