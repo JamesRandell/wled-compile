@@ -31,6 +31,7 @@ jobs:
         npm install
         echo '[env:custom_build]' >>platformio.ini
         echo 'extends = env:esp32s3dev_8MB' >>platformio.ini
+        echo 'build_flags = ${env:esp32s3dev_8MB.build_flags} -D WLED_MAX_BUSSES=10 -D CLIENT_SSID='\''"WuTangLan"'\'' -D CLIENT_PASS='\''"EtijeLIAJ9!!"'\''' >>platformio.ini
         
         echo 'build_unflags= -D WLED_RELEASE_NAME' >>platformio.ini
         pio run -e custom_build || pio run -e custom_build
